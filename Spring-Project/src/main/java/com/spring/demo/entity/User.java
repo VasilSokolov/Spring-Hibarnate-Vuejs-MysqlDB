@@ -1,5 +1,7 @@
 package com.spring.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -8,16 +10,20 @@ import java.io.Serializable;
 public class User implements Serializable {
 
     private Long id;
+    private String username;
     private String firstName;
     private String lastName;
+
+    @JsonIgnore
     private String password;
     private String role;
 
     public User() {}
 
-    public User(String firstName, String lastName) {
+    public User(String firstName, String lastName, String role) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.role = role;
     }
 
     @Id
@@ -28,6 +34,15 @@ public class User implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    @Column
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @Column

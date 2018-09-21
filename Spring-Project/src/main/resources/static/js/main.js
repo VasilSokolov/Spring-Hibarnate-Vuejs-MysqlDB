@@ -147,8 +147,10 @@ Vue.component('user-list', {
         '</div>',
     created: function() {
         userApi.get().then(result =>
-            result.json().then(data =>
-                data.forEach(user => this.users.push(user))
+            result.json().then(data => {
+                    console.log(this.users);
+                    data.forEach(user => this.users.push(user))
+                }
             )
         )
     },

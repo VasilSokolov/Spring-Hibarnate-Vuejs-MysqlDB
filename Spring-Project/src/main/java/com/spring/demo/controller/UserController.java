@@ -18,7 +18,9 @@ public class UserController {
 
     @GetMapping
     public List<User> getUsers() {
-        return userService.findAll();
+        List<User> users = userService.findAll();
+        System.out.println(users.toString());
+        return users;
     }
 
     @GetMapping("{id}")

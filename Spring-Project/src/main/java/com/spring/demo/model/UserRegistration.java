@@ -2,7 +2,7 @@ package com.spring.demo.model;
 
 import javax.validation.constraints.Size;
 
-public class LoginModel {
+public class UserRegistration {
 
     private String loginUser;
     private String password;

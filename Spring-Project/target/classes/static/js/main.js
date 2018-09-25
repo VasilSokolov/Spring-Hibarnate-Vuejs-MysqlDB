@@ -1,3 +1,15 @@
+import Vue from 'vue';
+import VueResource from 'vue-resource';
+import App from 'pages/App.vue';
+
+Vue.use(VueResource);
+new Vue({
+    el:'#app',
+    render: a => a(App)
+});
+
+
+/*
 var userApi = Vue.resource("/users{/id}")
 
 function getIndex(list, id) {
@@ -160,12 +172,4 @@ Vue.component('user-list', {
         }
     }
 });
-
-var app = new Vue ({
-    el: '#app',
-    template: '<user-list :users="users"/>',
-    data: {
-        users: []
-    }
-})
-
+*/

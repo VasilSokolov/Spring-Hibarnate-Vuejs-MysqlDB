@@ -4,17 +4,26 @@ import javax.validation.constraints.Size;
 
 public class UserRegistration {
 
-    private String loginUser;
+    private Long id;
+    private String username;
     private String password;
     private String confirmPassword;
 
-    @Size(min = 5, message = "Username is too short")
-    public String getLoginUser() {
-        return loginUser;
+    public Long getId() {
+        return id;
     }
 
-    public void setLoginUser(String loginUser) {
-        this.loginUser = loginUser;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Size(min = 5, message = "Username is too short")
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String loginUser) {
+        this.username = loginUser;
     }
 
     @Size(min = 8, message = "Password is too short")

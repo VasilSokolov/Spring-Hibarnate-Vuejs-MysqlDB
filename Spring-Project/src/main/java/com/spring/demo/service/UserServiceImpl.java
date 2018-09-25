@@ -40,11 +40,6 @@ public class UserServiceImpl implements UserService {
         return userRepository.saveAndFlush(user);
     }
 
-//    @Override
-//    public boolean delete(Long id) {
-//        return userRepository.delete(id);
-//    }
-
     @Override
     public void delete(User user) {
         userRepository.delete(user);

@@ -4,7 +4,6 @@ import com.spring.demo.entity.User;
 import com.spring.demo.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,8 +23,8 @@ public class HomeController {
 		this.userServiceImpl = userServiceImpl;
 	}
 
-	@GetMapping
-    public String main(Model model) {
+	@GetMapping()
+    public String main( Model model) {
         HashMap<Object, Object> data = new HashMap<>();
         User user = new User("ivan", "ivanov", "ADMIN");
         Number number = 1;
@@ -50,8 +49,8 @@ public class HomeController {
         return "login";
     }
 
-//    @GetMapping(value="users/{id}")
-//    public String singlePost(){
-//        return "users";
-//    }
+    @GetMapping(value="user/{id}")
+    public String singleUser(){
+        return "user";
+    }
 }

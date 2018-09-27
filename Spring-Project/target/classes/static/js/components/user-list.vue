@@ -40,7 +40,6 @@
         },
         methods: {
             editUser(user) {
-                console.log(user);
                 this.user = user;
             },
             deleteUser(user) {
@@ -48,7 +47,9 @@
                         if (result.ok) {
                             this.users.splice(this.users.indexOf(user), 1);
                         }
-                    })
+                    }).catch(e => {
+                    console.log(e);
+                });
             }
         }
     }

@@ -47,7 +47,9 @@
                         if (result.ok) {
                             this.users.splice(this.users.indexOf(user), 1);
                         }
-                    })
+                    }).catch(e => {
+                    console.log(e);
+                });
             }
         }
     }

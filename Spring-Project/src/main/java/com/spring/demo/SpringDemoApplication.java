@@ -18,4 +18,20 @@ public class SpringDemoApplication {
     public ModelMapper getModelMapper() {
         return new ModelMapper();
     }
+
+//    @Autowired
+//    public void authenticationManager(AuthenticationManagerBuilder builder, UserServiceImpl repository, UserService userService) throws Exception {
+//        if (repository.findAll().equals(0))
+//            userService.save(new User("admin", "admin", "ADMIN"));
+//        builder.userDetailsService(userDetailsService(repository)).passwordEncoder(passwordEncoder);
+//    }
+//
+//    /**
+//     * We return an istance of our CustomUserDetails.
+//     * @param userService
+//     * @return
+//     */
+//    private UserDetailsService userDetailsService(final UserServiceImpl userService) {
+//        return username -> new CustomUserDetails(userService.findByUsername(username));
+//    }
 }

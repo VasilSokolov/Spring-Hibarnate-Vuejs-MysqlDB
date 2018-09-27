@@ -1,7 +1,7 @@
 <template>
     <form id="demoForm" method="post">
        <div>
-               <p>First Name and Last Name must be between 5 and 10</p>
+               <p>First Name and Last Name must be between 4 and 10</p>
            </div>
        <div class="btn-group has-error">
                <input id="firstName" type="text" placeholder="First Name" v-model="firstName"/>
@@ -46,7 +46,9 @@
                                     this.id = '';
                                 })
                             }
-                        )
+                        ).catch(e => {
+                            console.log(e);
+                        });
                     } else {
                         this.$resource("/users{/id}").save({}, user).then(result =>
                             result.json().then(data => {
@@ -54,7 +56,9 @@
                                 this.firstName = '';
                                 this.lastName = '';
                             })
-                        )
+                        ).catch(e => {
+                            console.log(e);
+                        });
                     }
                 }
             }

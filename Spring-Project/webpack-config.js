@@ -9,6 +9,9 @@ module.exports = {
     contentBase: './dist',
     compress: true,
     port: 8000,
+    // proxy: false,
+    //   https: false,
+    //   hotOnly: false,
     allowedHosts: [
       'localhost:9000'
     ]

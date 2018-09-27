@@ -20,10 +20,15 @@ public class User implements Serializable {
 
     public User() {}
 
-    public User(String firstName, String lastName, String role) {
+    public User(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.role = role;
+    }
+
+    public User(String username, String password, String role) {
+        this.username = username;
+        this.password = password;
+        this.role= role;
     }
 
     @Id
@@ -54,7 +59,7 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    @Column
+    @Column(nullable = false)
     public String getFirstName() {
         return firstName;
     }
@@ -63,7 +68,7 @@ public class User implements Serializable {
         this.firstName = firstName;
     }
 
-    @Column
+    @Column(nullable = false)
     public String getLastName() {
         return lastName;
     }

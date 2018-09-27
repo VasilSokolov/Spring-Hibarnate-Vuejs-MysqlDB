@@ -26,10 +26,10 @@ public class HomeController {
 	@GetMapping()
     public String main( Model model) {
         HashMap<Object, Object> data = new HashMap<>();
-        User user = new User("ivan", "ivanov", "ADMIN");
+        User user = new User("Ivan", "Ivanov", "ADMIN");
         Number number = 1;
         user.setId(number.longValue());
-        user.setUsername("pepi");
+        user.setUsername("Ivan");
         data.put("profile", user);
         data.put("users", userServiceImpl.findAll());
 

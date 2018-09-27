@@ -25,27 +25,27 @@
 ////        web.ignoring().antMatchers("/js/**");
 ////    }
 //
-//    @Autowired
-//    public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.inMemoryAuthentication().withUser("admin").password("admin").roles("ADMIN");
-//        auth.inMemoryAuthentication().withUser("user").password("user").roles("USER");
-//    }
+////    @Autowired
+////    public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
+////        auth.inMemoryAuthentication().withUser("admin").password("admin").roles("ADMIN");
+////        auth.inMemoryAuthentication().withUser("user").password("user").roles("USER");
+////    }
 //
 //    @Override
 //    protected void configure(HttpSecurity http) throws Exception {
-//        http.cors().and()
-//////                authorizeRequests()
-//////                .anyRequest().permitAll();
-//                .headers()
-//                .frameOptions().disable().and()
-//                .authorizeRequests()
-//                .antMatchers("/", "/login", "/users", "/favicon/ico").permitAll()
-//                .antMatchers("/private**").authenticated()
-////                .antMatchers("/users").authenticated()
-//                .anyRequest()
-//                .authenticated()
-//                .and()
-//                .csrf().disable();
+//        http.csrf().disable()
+////                .authorizeRequests()
+//                .anyRequest().permitAll();
+////                .headers()
+////                .frameOptions().disable().and()
+////                .authorizeRequests()
+////                .antMatchers("/", "/login", "/users", "/favicon/ico").permitAll()
+////                .antMatchers("/private**").authenticated()
+//////                .antMatchers("/users").authenticated()
+////                .anyRequest()
+////                .authenticated()
+////                .and()
+////                .csrf().disable();
 //
 ////        http.csrf().disable()
 ////                .authorizeRequests()

@@ -4,11 +4,12 @@ import com.spring.demo.entity.User;
 import com.spring.demo.service.UserServiceImpl;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.security.core.context.SecurityContextHolder;
-//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
+//import org.springframework.security.core.context.SecurityContextHolder;
+//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @CrossOrigin(origins="*", maxAge=3600, allowedHeaders={"x-auth-token", "x-requested-with", "x-xsrf-token"})
 @RestController
